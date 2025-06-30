@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#####
+#Core framework functions...
+#####
+
 export FRAMEWORK_INCLUDES_FULL_PATH
 FRAMEWORK_INCLUDES_FULL_PATH="$(realpath ../Framework-Includes)"
 
@@ -35,20 +39,9 @@ done
 unset IFS
 fi
 
-#####
-#Core framework functions...
-#####
-
-
-function main()
-{
-
 PreflightCheck
 
 echo > $LOGFILENAME
 
 #Your custom logic here....
 echo "Custom logic here..."
-}
-
-main
