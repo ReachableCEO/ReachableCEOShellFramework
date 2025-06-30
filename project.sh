@@ -59,6 +59,8 @@ if [ PreflightCheck = 1 ]; then
 PreflightCheck
 fi
 
+echo > $LOGFILENAME
+
 #Your custom logic here....
 echo "Custom logic here..."
 }
