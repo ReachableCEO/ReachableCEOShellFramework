@@ -14,10 +14,10 @@ PROJECT_INCLUDES_FULL_PATH="$(realpath ./Project-ConfigFiles)"
 
 
 #Framework variables are read from hee
-source $VARS_FULL_PATH/FrameworkVars
+source $FRAMEWORK_CONFIGS_FULL_PATH/FrameworkVars
 
 #Boilerplate and support functions
-FrameworkIncludeFiles="$(ls -1 --color=none includes/*)"
+FrameworkIncludeFiles="$(ls -1 --color=none $FRAMEWORK_INCLUDES_FULL_PATH/*)"
 
 IFS=$'\n\t'
 for file in ${FrameworkIncludeFiles[@]}; do
@@ -27,14 +27,13 @@ unset IFS
 
 
 if [[ ProjectIncludes = 1 ]]; then
-ProjectIncludeFiles="$(ls -1 --color=none project-includes/*)"
+ProjectIncludeFiles="$(ls -1 --color=none $PROJECT_INCLUDES_FULL_PATH/*)"
 IFS=$'\n\t'
 for file in ${ProjectIncludeFiles[@]}; do
 	. "$file"
 done
 unset IFS
 fi
-
 
 #####
 #Core framework functions...
@@ -66,11 +65,8 @@ done
 
 function main()
 {
-StrictMode
 
-if [ PreflightCheck = 1 ]; then
 PreflightCheck
-fi
 
 echo > $LOGFILENAME
 
