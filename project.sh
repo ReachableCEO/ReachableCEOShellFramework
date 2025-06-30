@@ -1,7 +1,20 @@
 #!/bin/bash
 
+export FRAMEWORK_INCLUDES_FULL_PATH
+FRAMEWORK_INCLUDES_FULL_PATH="$(realpath ./Framework-Includes)"
+
+export FRAMEWORK_CONFIGS_FULL_PATH
+FRAMEWORK_CONFIGS_FULL_PATH="$(realpath ./Framework-ConfigFiles)"
+
+export PROJECT_INCLUDES_FULL_PATH
+PROJECT_INCLUDES_FULL_PATH="$(realpath ./Project-Includes)"
+
+export PROJECT_CONGIGS_FULL_PATH
+PROJECT_INCLUDES_FULL_PATH="$(realpath ./Project-ConfigFiles)"
+
+
 #Framework variables are read from hee
-source vars/FrameworkVars
+source $VARS_FULL_PATH/FrameworkVars
 
 #Boilerplate and support functions
 FrameworkIncludeFiles="$(ls -1 --color=none includes/*)"
