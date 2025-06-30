@@ -1,16 +1,16 @@
 #!/bin/bash
 
 export FRAMEWORK_INCLUDES_FULL_PATH
-FRAMEWORK_INCLUDES_FULL_PATH="$(realpath ./Framework-Includes)"
+FRAMEWORK_INCLUDES_FULL_PATH="$(realpath ../Framework-Includes)"
 
 export FRAMEWORK_CONFIGS_FULL_PATH
-FRAMEWORK_CONFIGS_FULL_PATH="$(realpath ./Framework-ConfigFiles)"
+FRAMEWORK_CONFIGS_FULL_PATH="$(realpath ../Framework-ConfigFiles)"
 
 export PROJECT_INCLUDES_FULL_PATH
-PROJECT_INCLUDES_FULL_PATH="$(realpath ./Project-Includes)"
+PROJECT_INCLUDES_FULL_PATH="$(realpath ../Project-Includes)"
 
 export PROJECT_CONGIGS_FULL_PATH
-PROJECT_INCLUDES_FULL_PATH="$(realpath ./Project-ConfigFiles)"
+PROJECT_INCLUDES_FULL_PATH="$(realpath ../Project-ConfigFiles)"
 
 
 #Framework variables are read from hee
