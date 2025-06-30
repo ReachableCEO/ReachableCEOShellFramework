@@ -40,29 +40,6 @@ fi
 #####
 
 
-while [ ! -z "$1" ];do
-   case "$1" in
-        -h|--help)
-          LocalHelp
-          ;;
-        -k1|--key1)
-          shift
-          KEY1="$1"
-          echo "key 1 is $KEY1"
-          ;;
-        -k2|--key2)
-          shift
-          KEY2="$1"
-          echo "key 2 is $KEY2"
-          ;;
-        *)
-	echo "Displaying $0 help..."
-	LocalHelp
-   esac
-shift
-done
-
-
 function main()
 {
 
