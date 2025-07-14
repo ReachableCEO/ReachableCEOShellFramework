@@ -15,6 +15,5 @@ function print_error()
   tput bold
   echo -e "$RED $1${NC}"
   echo -e "$RED $1${NC}" >> "$LOGFILENAME"
-  echo "$1"
   tput sgr0
 }

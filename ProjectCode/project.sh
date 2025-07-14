@@ -13,8 +13,8 @@ FRAMEWORK_CONFIGS_FULL_PATH="$(realpath ../Framework-ConfigFiles)"
 export PROJECT_INCLUDES_FULL_PATH
 PROJECT_INCLUDES_FULL_PATH="$(realpath ../Project-Includes)"
 
-export PROJECT_CONGIGS_FULL_PATH
-PROJECT_INCLUDES_FULL_PATH="$(realpath ../Project-ConfigFiles)"
+export PROJECT_CONFIGS_FULL_PATH
+PROJECT_CONFIGS_FULL_PATH="$(realpath ../Project-ConfigFiles)"
 
 
 #Framework variables are read from hee
@@ -30,7 +30,7 @@ done
 unset IFS
 
 
-if [[ ProjectIncludes = 1 ]]; then
+if [[ $ProjectIncludes = 1 ]]; then
 ProjectIncludeFiles="$(ls -1 --color=none $PROJECT_INCLUDES_FULL_PATH/*)"
 IFS=$'\n\t'
 for file in ${ProjectIncludeFiles[@]}; do

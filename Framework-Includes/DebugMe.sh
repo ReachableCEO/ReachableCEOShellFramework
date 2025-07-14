@@ -20,7 +20,7 @@ function DebugMe() {
 # * print commands to be executed to stderr as if they were read from input 
 # (script file or keyboard)
 # * print everything before any ( substitution and expansion, …) is applied
-set -v
+[[ $script_debug = 1 ]] && set -v
 
 # * print everything as if it were executed, after substitution and expansion is applied
 # * indicate the depth-level of the subshell (by default by prefixing a + (plus) sign to 
@@ -28,6 +28,6 @@ set -v
 # * indicate the recognized words after word splitting by marking them like 'x y'
 # * in shell version 4.1, this debug output can be printed to a configurable file 
 #descriptor, rather than sdtout by setting the BASH_XTRACEFD variable.
-set -x
+[[ $script_debug = 1 ]] && set -x
 
 }
